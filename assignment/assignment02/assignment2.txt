@@ -3286,3 +3286,35 @@ mysql> Select pl.productline,extract(month from o.orderDate) as Month,count(extr
 84 rows in set (0.03 sec)
 
 mysql> notee;
+mysql> select customerName from customers where customerNumber not in (select distinct(customerNumber) from orders);
++--------------------------------+
+| customerName                   |
++--------------------------------+
+| Havel & Zbyszek Co             |
+| American Souvenirs Inc         |
+| Porto Imports Co.              |
+| Asian Shopping Network, Co     |
+| Natrlich Autos                |
+| ANG Resellers                  |
+| Messner Shopping Network       |
+| Franken Gifts, Co              |
+| BG&E Collectables              |
+| Schuyler Imports               |
+| Der Hund Imports               |
+| Cramer Spezialit„ten, Ltd      |
+| Asian Treasures, Inc.          |
+| SAR Distributors, Co           |
+| Kommission Auto                |
+| Lisboa Souveniers, Inc         |
+| Precious Collectables          |
+| Stuttgart Collectable Exchange |
+| Feuer Online Stores, Inc       |
+| Warburg Exchange               |
+| Anton Designs, Ltd.            |
+| Mit Vergngen & Co.            |
+| Kremlin Collectables, Co.      |
+| Raanan Stores, Inc             |
++--------------------------------+
+24 rows in set (0.00 sec)
+
+mysql> notee;
